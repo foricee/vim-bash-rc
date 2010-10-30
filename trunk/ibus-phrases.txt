@@ -1,0 +1,93 @@
+; ibus 拼音输入法--自定义短语配置文件
+;
+; 说明：
+;   **注意**
+;       修改后请重新启动输入法
+;       或者运行下面命令：pkill -x -u $USERNAME ibus-engine-pinyin
+;   格式：
+;       英文字符串=短语
+;       英文字符串=#动态短语
+;   动态短语：
+;       函数            含义            举例
+;       ${year}         年(4位)         2006、2008
+;       ${year_yy}      年(2位)         06、08
+;       ${month}        月              12、8、3
+;       ${month_mm}     月              12、08、03
+;       ${day}          日              3、13、22
+;       ${day_dd}       日              03、13、22
+;       ${weekday}      星期            0、1、2、5、6
+;       ${fullhour}     时(24小时制)    02、08、13、23
+;       ${halfhour}     时(12小时制)    02、08、01、11
+;       ${ampm}         AM、PM(英)      AM、PM（大写）
+;       ${minute}       分              02、08、15、28
+;       ${second}       秒              02、08、15、28
+;       ${year_cn}      年(中文4位)     二〇〇六
+;       ${year_yy_cn}   年(中文2位)     〇六
+;       ${month_cn}     月(中文)        十二、八、三
+;       ${day_cn}       日(中文)        三、十三、二十二
+;       ${weekday_cn}   星期(中文)      日、一、二、五、六
+;       ${fullhour_cn}  月(中文24时制)  二、八、十三、二十三
+;       ${halfhour_cn}  时(中文12时制)  二、八、一、十一
+;       ${ampm_cn}      上午下午(中文)  上午、下午
+;       ${minute_cn}    分(中文)        零二、零八、十五、二十八
+;       ${second_cn}    秒(中文)        零二、零八、十五、二十八
+
+bsn=╭∩╮（︶︿︶）╭∩╮
+haha=^_^
+haha=o(∩∩)o...
+hehe=:-)
+hehe=;-)
+up=U盘
+yp=U盘
+xixi=(*^__^*)...
+
+gg=Google
+bd=Baidu
+py=Python
+xh=10S103009
+youg=foricee@gmail.com
+youn=gaohandong@163.com
+youn=gaohandongde@126.com
+lx=Linux
+arch=Archlinux
+
+cx=查询
+fl=分类
+yg=一个
+zdscs=最大生成树
+ccjl=层次聚类
+jl=聚类
+sf=算法
+how=hownet
+qz=权值
+bz=标准
+bz=标注
+lb=类别
+win=Windows
+ec=eclipse
+sys=实验室
+u=URL
+
+shd=傻的喝的
+pod=破的喝的
+pad=胖的呼的
+fad=烦的喝的
+bad=宝的喝的
+yud=圆的喝的
+lad=懒得喝的
+jid=急的喝的
+cod=聪的喝的
+ppn=拍拍你
+ylg=圆了咕咚的
+
+; 动态短语
+rq=#${year}年${month}月${day}日
+rq=#${year_cn}年${month_cn}月${day_cn}日
+rq=#${year}-${month}-${day}
+sj=#${fullhour}时${minute}分${second}秒
+sj=#${fullhour}:${minute}:${second}
+xq=#星期${weekday_cn}
+; lb=#礼拜${weekday_cn}
+
+; 暂时不支持
+; nl=#农历${lunardate}
