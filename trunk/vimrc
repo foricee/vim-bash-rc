@@ -64,6 +64,7 @@ endif
 map <F11> zR<a-space>
 noremap zr zR
 
+nmap <space> <c-r>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI something
@@ -263,8 +264,8 @@ endfunction
 
 autocmd Filetype vim,_vimrc vmap ,cc :call Set_commentv_mine('" ')<cr>
 autocmd Filetype vim,_vimrc nmap ,cc :call Set_commentv_mine('" ')<cr>
-autocmd Filetype python,perl vmap ,cc :call Set_commentv_mine('# ')<cr>
-autocmd Filetype python,perl nmap ,cc :call Set_commentv_mine('# ')<cr>
+autocmd Filetype python,perl,sh vmap ,cc :call Set_commentv_mine('# ')<cr>
+autocmd Filetype python,perl,sh nmap ,cc :call Set_commentv_mine('# ')<cr>
 autocmd Filetype c,cpp vmap ,cc :call Set_commentv_mine('// ')<cr>
 autocmd Filetype c,cpp nmap ,cc :call Set_commentv_mine('// ')<cr>
 autocmd Filetype tex vmap ,cc :call Set_commentv_mine('% ')<cr>
