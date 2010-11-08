@@ -22,6 +22,14 @@ snippet for
 snippet forr
 	for ${1:needle} in range(${2:haystack}):
 		${3:# code...}
+snippet if
+	if ${1:condition}:
+		${2:# code...}
+snippet ife
+	if ${1:condition}:
+		${2:# code...}
+	else:
+		${3:# code...}
 # New Class
 snippet cl
 	class ${1:ClassName}(${2:object}):
@@ -96,6 +104,8 @@ snippet re
 	return
 snippet br
 	break
+snippet gl
+	global
 snippet break
 	i += 1
 	if i > ${1}:
