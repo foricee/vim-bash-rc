@@ -64,7 +64,7 @@ endif
 map <F11> zR<a-space>
 noremap zr zR
 
-nmap <space> <c-r>
+nmap <space> <c-f>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI something
@@ -79,8 +79,6 @@ if has("gui_running")
     "设置工具栏关
     set guioptions-=T
     set guioptions-=m
-    map <leader>tt :set go+=T<cr>
-    map <leader>tm :set go+=m<cr>
 endif
 
 
@@ -262,14 +260,14 @@ function! Set_commentv_mine(char)
     endif
 endfunction
 
-autocmd Filetype vim,_vimrc vmap ,cc :call Set_commentv_mine('" ')<cr>
-autocmd Filetype vim,_vimrc nmap ,cc :call Set_commentv_mine('" ')<cr>
-autocmd Filetype python,perl,sh vmap ,cc :call Set_commentv_mine('# ')<cr>
-autocmd Filetype python,perl,sh nmap ,cc :call Set_commentv_mine('# ')<cr>
-autocmd Filetype c,cpp vmap ,cc :call Set_commentv_mine('// ')<cr>
-autocmd Filetype c,cpp nmap ,cc :call Set_commentv_mine('// ')<cr>
-autocmd Filetype tex vmap ,cc :call Set_commentv_mine('% ')<cr>
-autocmd Filetype tex nmap ,cc :call Set_commentv_mine('% ')<cr>
+autocmd Filetype vim,_vimrc vmap cx :call Set_commentv_mine('" ')<cr>
+autocmd Filetype vim,_vimrc nmap cx :call Set_commentv_mine('" ')<cr>
+autocmd Filetype python,perl,sh vmap cx :call Set_commentv_mine('# ')<cr>
+autocmd Filetype python,perl,sh nmap cx :call Set_commentv_mine('# ')<cr>
+autocmd Filetype c,cpp vmap cx :call Set_commentv_mine('// ')<cr>
+autocmd Filetype c,cpp nmap cx :call Set_commentv_mine('// ')<cr>
+autocmd Filetype tex vmap cx :call Set_commentv_mine('% ')<cr>
+autocmd Filetype tex nmap cx :call Set_commentv_mine('% ')<cr>
 
 """"""""""""""""""""""""""""""
 " ppython section
@@ -339,7 +337,7 @@ map <leader>br :%!xxd -r<cr>
 
 " preprocess text, copy to MS Word to make chart
 " 替换多个空格为一个，去掉行尾空格
-map <leader>ct :%s/\s\+/ /g<cr>:%s/\s\+$//g<cr>ggVG,yggVG
+map <leader>tt :%s/\s\+/ /g<cr>:%s/\s\+$//g<cr>ggVG,yggVG
 
 "remove the windows ^M
 noremap <leader>M mmHmt:%s/<c-v><cr>//ge<cr>'tzt'm
