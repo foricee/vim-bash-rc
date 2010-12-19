@@ -5,11 +5,6 @@
 if has("win32")
     set guifont=courier_new:h12
     let s:vim__home='d:/program files/vim'
-    if has("gui")
-        noremap <m-space> :simalt ~<cr>
-        inoremap <m-space> <c-o>:simalt ~<cr>
-        cnoremap <m-space> <c-c>:simalt ~<cr>
-    endif
 else
     let s:vim__home='/home/foricee/.vim'
     set guifont=monospace\ 11
@@ -79,6 +74,10 @@ if has("gui_running")
     "设置工具栏关
     set guioptions-=T
     set guioptions-=m
+    au GUIEnter * simalt ~x "maximum the initial window
+    noremap <m-space> :simalt ~<cr>
+    inoremap <m-space> <c-o>:simalt ~<cr>
+    cnoremap <m-space> <c-c>:simalt ~<cr>
 endif
 
 
