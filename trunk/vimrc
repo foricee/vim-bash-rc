@@ -269,6 +269,11 @@ autocmd Filetype tex vmap cx :call Set_commentv_mine('% ')<cr>
 autocmd Filetype tex nmap cx :call Set_commentv_mine('% ')<cr>
 
 """"""""""""""""""""""""""""""
+" pshell section
+""""""""""""""""""""""""""""""
+autocmd filetype sh map <buffer> <leader><space> :w!<cr>:!sh "%"<cr>
+
+""""""""""""""""""""""""""""""
 " ppython section
 """"""""""""""""""""""""""""""
 autocmd filetype python set foldmethod=indent
@@ -360,3 +365,7 @@ function! Smarttohtml()
     "unload current buffer
     exe ":bd"
 endfunction
+
+map <F5> 0y$<c-tab>/<c-r>0<cr>
+map <F6> y<c-tab>A<space><esc>pj
+map <F7> <F6><F5>
