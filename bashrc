@@ -20,10 +20,14 @@ function gihpc() {
 function gi8w() {
     gi scp://hdgao@192.168.3.168/"$1"
 }
+function gixyss() {
+    gi scp://hdgao@219.217.228.80/"$1"
+}
 
 # ssh
 alias sshhpc="ssh -p 55555 hdgao@202.118.250.16"
 alias ssh8w="ssh hdgao@192.168.3.168"
+alias sshxyss="ssh hdgao@219.217.228.80"
 
 alias snet='watch -n 1 "/sbin/ifconfig eth0 | grep bytes"'
 
