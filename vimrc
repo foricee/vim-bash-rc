@@ -60,6 +60,7 @@ map <F11> zR<a-space>
 noremap zr zR
 
 nmap <space> <c-f>
+map <F2> <c-x><c-f>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI something
@@ -367,5 +368,4 @@ function! Smarttohtml()
 endfunction
 
 map <F5> 0y$<c-tab>/<c-r>0<cr>
-map <F6> y<c-tab>A<space><esc>pj
-map <F7> <F6><F5>
+map <F6> <c-tab>j
